@@ -1,5 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'theme';  // <--- this would be different based on which client app is running.
+
+
 html, body{
   height: 100%;
   margin: 0;
+  h1{
+    color: $primary-color;
+  }
 }

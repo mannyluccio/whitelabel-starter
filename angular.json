@@ -171,11 +171,6 @@
                 "input": "src/app/static/hsbc/assets",
                 "output": "assets"
               },
-              {
-                "glob": "config.json",
-                "input": "src/app/static/bmo",
-                "output": "."
-              },
               "src/assets"
             ],
             "stylePreprocessorOptions": {
@@ -194,7 +189,7 @@
             ]
           },
           "configurations": {
-            "production": {
+            "dev": {
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -222,7 +217,7 @@
                 }
               ]
             },
-            "dev": {
+            "production": {
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",

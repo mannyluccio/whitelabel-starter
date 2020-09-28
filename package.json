@@ -5,8 +5,8 @@
     "ng": "ng",
     "start bmo": "ng serve --project=bmo --configuration=dev --port 4200",
     "start hsbc": "ng serve --project=hsbc  --configuration=dev --port 4201",
-    "build bmo": "ng build --project=bmo  --configuration=dev",
-    "build hsbc": "ng build --project=hsbc  --configuration=dev",
+    "build bmo": "ng build --project=bmo --prod",
+    "build hsbc": "ng build --project=hsbc --prod",
     "lint": "ng lint"
   },
   "private": true,

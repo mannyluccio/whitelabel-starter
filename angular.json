@@ -30,6 +30,11 @@
                 "input": "src/app/static/bmo/assets",
                 "output": "assets"
               },
+              {
+                "glob": "config.json",
+                "input": "src/app/static/bmo",
+                "output": "."
+              },
               "src/assets"
             ],
             "stylePreprocessorOptions": {
@@ -52,7 +57,35 @@
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "with": "src/environments/environment_bmo.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            },
+            "dev": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment_bmo.ts"
                 }
               ],
               "optimization": true,
@@ -86,6 +119,9 @@
           "configurations": {
             "production": {
               "browserTarget": "bmo:build:production"
+            },
+            "dev": {
+              "browserTarget": "bmo:build:dev"
             }
           }
         },
@@ -135,6 +171,11 @@
                 "input": "src/app/static/hsbc/assets",
                 "output": "assets"
               },
+              {
+                "glob": "config.json",
+                "input": "src/app/static/bmo",
+                "output": "."
+              },
               "src/assets"
             ],
             "stylePreprocessorOptions": {
@@ -157,7 +198,35 @@
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "with": "src/environments/environment_hsbc.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            },
+            "dev": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment_hsbc.ts"
                 }
               ],
               "optimization": true,
@@ -191,6 +260,9 @@
           "configurations": {
             "production": {
               "browserTarget": "hsbc:build:production"
+            },
+            "dev": {
+              "browserTarget": "hsbc:build:dev"
             }
           }
         },

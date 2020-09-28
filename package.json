@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start bmo": "ng serve --project=bmo --port 4200",
-    "start hsbc": "ng serve --project=hsbc --port 4201",
-    "build bmo": "ng build --project=bmo",
-    "build hsbc": "ng build --project=hsbc",
+    "start bmo": "ng serve --project=bmo --configuration=dev --port 4200",
+    "start hsbc": "ng serve --project=hsbc  --configuration=dev --port 4201",
+    "build bmo": "ng build --project=bmo  --configuration=dev",
+    "build hsbc": "ng build --project=hsbc  --configuration=dev",
     "lint": "ng lint"
   },
   "private": true,

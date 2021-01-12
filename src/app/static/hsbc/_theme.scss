@@ -1,6 +1,13 @@
 /*Client specific code*/
 
+@import 'typography'; // <--- this would be different based on which client app is running.
+
+
 $primary-color: red;
+
+html body{
+  font-family: 'kaushan_scriptregular';
+}
 
 button{
   background-color: $primary-color !important;

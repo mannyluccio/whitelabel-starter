@@ -1,6 +1,12 @@
 /*Client specific code*/
+@import 'typography'; // <--- this would be different based on which client app is running.
+
 
 $primary-color: blue;
+
+html body{
+  font-family: 'source_sans_proregular';
+}
 
 button{
   background-color: $primary-color !important;

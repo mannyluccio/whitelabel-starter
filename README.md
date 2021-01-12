@@ -5,6 +5,7 @@ An Angular starter to create a saas website, with different customization based 
 ## Feature
 - Different css per client
 - Different images per client
+- Different fonts per client
 - Different translations per client
 - Different build system per client and per environment(staging, prod)
 

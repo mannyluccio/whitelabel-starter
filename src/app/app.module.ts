@@ -8,6 +8,13 @@ import {AuthService} from './core/services/auth.service';
 import {APIInterceptor} from './shared/http-resources/api.interceptor';
 import {ErrorInterceptor} from './shared/http-resources/error.interceptor';
 import {TokenInterceptor} from './shared/http-resources/token.interceptor';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {SharedModule} from './shared.module';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -16,7 +23,16 @@ import {TokenInterceptor} from './shared/http-resources/token.interceptor';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      },
+      defaultLanguage: 'en'
+    }),
+    SharedModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: APIInterceptor, multi: true},

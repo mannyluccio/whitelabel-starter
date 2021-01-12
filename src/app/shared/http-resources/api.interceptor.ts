@@ -8,8 +8,12 @@ export class APIInterceptor implements HttpInterceptor {
   private api = environment.api;
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    let apiReq: any = req;
 
-    const apiReq = req.clone({ url: this.api + req.url });
+    // read translations json from localhost instead of API url
+    if (!req.url.includes('.json')) {
+      apiReq = req.clone({ url: this.api + req.url });
+    }
     return next.handle(apiReq);
   }
 }

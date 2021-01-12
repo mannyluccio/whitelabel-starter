@@ -31,6 +31,11 @@
                 "output": "assets"
               },
               {
+                "glob": "**/*",
+                "input": "src/app/i18n/bmo",
+                "output": "i18n"
+              },
+              {
                 "glob": "config.json",
                 "input": "src/app/static/bmo",
                 "output": "."
@@ -166,6 +171,11 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
+              {
+                "glob": "**/*",
+                "input": "src/app/i18n/hsbc",
+                "output": "i18n"
+              },
               {
                 "glob": "**/*",
                 "input": "src/app/static/hsbc/assets",

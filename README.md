@@ -1,6 +1,6 @@
-# Angular9Starter
+# Saas whitelabel starter
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
+An Angular starter to create a saas website, with different customization based on the client and the environment
 
 ## Feature
 - Different css per client
